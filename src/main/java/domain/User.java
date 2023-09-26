@@ -2,6 +2,7 @@ package domain;
 
 public class User {
         public String username;
+        public String name;
         public String password;
         public int cellPhoneNumber;
         public String email;
@@ -12,11 +13,21 @@ public class User {
 
         private User(Builder b){
             this.username = b.username;
+            this.name = b.name;
             this.password = b.password;
             this.cellPhoneNumber = b.cellPhoneNumber;
             this.email = b.email;
             this.userType = b.userType;
         }
+
+    public String getName() {
+        return name;
+    }
+
+    public User setName(String name) {
+        this.name = name;
+        return this;
+    }
 
     public int getCellPhoneNumber() {
         return cellPhoneNumber;
@@ -63,7 +74,8 @@ public class User {
         return this;
     }
 
-    public User(String username, String password, String userType, int cellPhoneNumber, String email) {
+    public User(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
+        this.name = name;
         this.username = username;
         this.password = password;
         this.cellPhoneNumber = cellPhoneNumber;
@@ -72,6 +84,7 @@ public class User {
     }
 
     public static class Builder{
+            private String name;
             private String username;
             private String password;
             private int cellPhoneNumber;
@@ -84,6 +97,10 @@ public class User {
                 return this;
             }
 
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
             public Builder password(String password) {
                 this.password = password;
                 return this;
@@ -105,6 +122,7 @@ public class User {
             }
 
             public Builder copy(User e){
+                this.name = e.name;
                 this.username = e.username;
                 this.password = e.password;
                 this.cellPhoneNumber = e.cellPhoneNumber;

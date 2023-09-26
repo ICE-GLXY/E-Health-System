@@ -1,39 +1,39 @@
 package domain;
 
 public class nurse extends User{
-    private String name;
+    private String nurseID;
 
     protected nurse(){
     }
 
     private nurse(Builder b){
-        this.name = b.name;
+        this.nurseID = b.nurseID;
     }
 
-    public String getName() {
-        return name;
+    public String getNurseID() {
+        return nurseID;
     }
 
-    public nurse setName(String name) {
-        this.name = name;
+    public nurse setNurseID(String nurseID) {
+        this.nurseID = nurseID;
         return this;
     }
 
-    public nurse(String username, String password, String userType, int cellPhoneNumber, String email, String name) {
-        super (username, password, userType, cellPhoneNumber, email);
-        this.name = name;
+    public nurse(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
+        super (username, name, password, userType, cellPhoneNumber, email);
+          this.nurseID = nurseID;
     }
 
     public static class Builder{
-        private String name;
+        private String nurseID;
 
-        public Builder name(String name) {
-            this.name = name;
+        public Builder nurseID(String nurseID) {
+            this.nurseID = nurseID;
             return this;
         }
 
         public Builder copy(nurse e){
-            this.name = e.name;
+            this.nurseID = e.nurseID;
             return this;
         }
 
