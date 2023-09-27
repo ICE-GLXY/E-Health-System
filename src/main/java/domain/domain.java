@@ -1,4 +1,4 @@
 package domain;
 
-public class domain {
+public class domain extends User {
 }
