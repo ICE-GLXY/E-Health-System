@@ -2,6 +2,7 @@ package domain;
 
 public class patient extends User
 {
+    private User user;
     private String patientID;
         private int age;
         private int weight;
@@ -15,6 +16,7 @@ public class patient extends User
         }
 
         private patient(Builder b){
+            this.user = b.user;
             this.patientID = b.patientID;
             this.age = b.age;
             this.weight = b.weight;
@@ -24,6 +26,15 @@ public class patient extends User
             this.city = b.city;
             this.province = b.province;
         }
+
+    public User getUser() {
+        return user;
+    }
+
+    public patient setUser(User user) {
+        this.user = user;
+        return this;
+    }
 
     public String getPatientID() {
         return patientID;
@@ -109,6 +120,7 @@ public class patient extends User
         }
 
         public static class Builder{
+            private User user;
             private String patientID;
             private int age;
             private int weight;
@@ -118,7 +130,10 @@ public class patient extends User
             private String city;
             private String province;
 
-
+            public Builder user(User user) {
+                this.user = user;
+                return this;
+            }
             public Builder patientID(String patientID) {
                 this.patientID = patientID;
                 return this;
@@ -153,6 +168,7 @@ public class patient extends User
                 return this;
             }
             public Builder copy(patient e){
+                this.user = e.user;
                 this.patientID = e.patientID;
                 this.age = e.age;
                 this.weight = e.weight;
