@@ -1,13 +1,17 @@
 package domain;
 
-public class doctor extends User
+public class doctor
 {
     private String doctorID;
+    private medicalFacility medicalFacility;
+    private User user;
 
     protected doctor(){
     }
 
     private doctor(Builder b){
+        this.user = b.user;
+        this.medicalFacility = b.medicalFacility;
         this.doctorID = b.doctorID;
     }
 
@@ -20,14 +24,37 @@ public class doctor extends User
         return this;
     }
 
-    public doctor(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
-        super (username, name, password, userType, cellPhoneNumber, email);
-        this.doctorID = doctorID;
+    public medicalFacility getMedicalFacility() {
+        return medicalFacility;
+    }
+
+    public doctor setMedicalFacility(medicalFacility medicalFacility) {
+        this.medicalFacility = medicalFacility;
+        return this;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public doctor setUser(User user) {
+        this.user = user;
+        return this;
     }
 
     public static class Builder{
         private String doctorID;
+        private medicalFacility medicalFacility;
+        private User user;
 
+        public Builder user(User user) {
+            this.user = user;
+            return this;
+        }
+        public Builder medicalFacility(medicalFacility medicalFacility) {
+            this.medicalFacility = medicalFacility;
+            return this;
+        }
         public Builder doctorID(String doctorID) {
             this.doctorID = doctorID;
             return this;
@@ -35,6 +62,8 @@ public class doctor extends User
 
         public Builder copy(doctor e){
             this.doctorID = e.doctorID;
+            this.medicalFacility = e.medicalFacility;
+            this.user = e.user;
             return this;
         }
 

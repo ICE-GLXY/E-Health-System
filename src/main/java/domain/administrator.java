@@ -1,6 +1,7 @@
 package domain;
 
-public class administrator extends User {
+public class administrator {
+    private User user;
     private String administratorID;
     private String managedUsers;
 
@@ -26,22 +27,30 @@ public class administrator extends User {
         return this;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public administrator setUser(User user) {
+        this.user = user;
+        return this;
+    }
+
     private administrator(Builder b){
+        this.user = b.user;
         this.administratorID = b.administratorID;
         this.managedUsers = b.managedUsers;
     }
 
-
-    public administrator(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
-        super (username, name, password, userType, cellPhoneNumber, email);
-        this.administratorID = administratorID;
-        this.managedUsers = managedUsers;
-    }
-
     public static class Builder{
+        private User user;
         private String administratorID;
         private String managedUsers;
 
+        public Builder user(User user) {
+            this.user = user;
+            return this;
+        }
         public Builder administratorID(String administratorID) {
             this.administratorID = administratorID;
             return this;
@@ -52,6 +61,7 @@ public class administrator extends User {
         }
 
         public Builder copy(administrator e){
+            this.user = e.user;
             this.administratorID = e.administratorID;
             this.managedUsers = e.managedUsers;
             return this;
