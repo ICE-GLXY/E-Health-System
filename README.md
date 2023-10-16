@@ -5,4 +5,4 @@
 ## ERD for E-Health-System
 
 ---
-![ERD](UML/UML V1.PNG)
+![ERD](https://github.com/ICE-GLXY/E-Health-System/blob/main/UML/UML%20V1.PNG?raw=true)
