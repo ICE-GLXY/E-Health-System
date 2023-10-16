@@ -5,5 +5,4 @@
 ## ERD for E-Health-System
 
 ---
-
-![](UML/UML V1.PNG)
+![ERD](UML/UML V1.PNG)
