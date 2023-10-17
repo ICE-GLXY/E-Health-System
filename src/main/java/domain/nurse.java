@@ -41,6 +41,15 @@ public class nurse{
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "nurse{" +
+                "nurseID='" + nurseID + '\'' +
+                ", user=" + user +
+                ", medicalFacility=" + medicalFacility +
+                '}';
+    }
+
     public static class Builder{
         private String nurseID;
         private User user;

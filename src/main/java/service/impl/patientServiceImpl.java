@@ -1,10 +1,7 @@
 package service.impl;
 
-import domain.doctor;
 import domain.patient;
-import repository.IDoctorRepository;
 import repository.IPatientRepository;
-import service.IDoctorService;
 import service.IPatientService;
 
 import java.util.List;

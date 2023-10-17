@@ -1,11 +1,21 @@
 package domain;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Entity
 public class User {
+    @Id @NotNull
         public String username;
+    @NotNull
         public String name;
+    @NotNull
         public String password;
+    @NotNull
         public int cellPhoneNumber;
+    @NotNull
         public String email;
+    @NotNull
         public String userType;
 
         protected User(){
@@ -73,14 +83,16 @@ public class User {
         this.userType = userType;
         return this;
     }
-
-    public User(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.cellPhoneNumber = cellPhoneNumber;
-        this.email = email;
-        this.userType = userType;
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", password=" + password + '\'' +
+                ", cellPhoneNumber=" + cellPhoneNumber + '\'' +
+                ", email=" + email + '\'' +
+                ", userType=" + userType +
+                '}';
     }
 
     public static class Builder{

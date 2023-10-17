@@ -1,6 +1,6 @@
 package domain;
 
-public class patient extends User
+public class patient
 {
     private User user;
     private String patientID;
@@ -107,17 +107,21 @@ public class patient extends User
         return this;
     }
 
-    public patient(String username, String name, String password, String userType, int cellPhoneNumber, String email) {
-            super (username, name, password, userType, cellPhoneNumber, email);
-            this.patientID = patientID;
-            this.age = age;
-            this.weight = weight;
-            this.height = height;
-            this.streetNumber = streetNumber;
-            this.streetName = streetName;
-            this.city = city;
-            this.province = province;
-        }
+    @Override
+    public String toString() {
+        return "patient{" +
+                "patientID='" + patientID + '\'' +
+                ", user=" + user +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", streetNumber=" + streetNumber +
+                ", streetName='" + streetName + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                '}';
+    }
+
 
         public static class Builder{
             private User user;
