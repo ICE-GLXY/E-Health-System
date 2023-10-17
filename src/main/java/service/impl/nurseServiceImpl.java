@@ -1,10 +1,7 @@
 package service.impl;
 
-import domain.doctor;
 import domain.nurse;
-import repository.IDoctorRepository;
 import repository.INurseRepository;
-import service.IDoctorService;
 import service.INurseService;
 
 import java.util.List;

@@ -36,6 +36,15 @@ public class administrator {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "administrator{" +
+                "administratorID='" + administratorID + '\'' +
+                ", managedUsers='" + managedUsers + '\'' +
+                ", user=" + user +
+                '}';
+    }
+
     private administrator(Builder b){
         this.user = b.user;
         this.administratorID = b.administratorID;

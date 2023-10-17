@@ -109,6 +109,21 @@ public class medicalFacility {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "medicalFacility{" +
+                "medicalFacilityID='" + medicalFacilityID + '\'' +
+                ", name='" + name + '\'' +
+                ", streetNumber=" + streetNumber + '\'' +
+                ", streetName=" + streetName + '\'' +
+                ", city=" + city + '\'' +
+                ", province=" + province + '\'' +
+                ", email=" + email + '\'' +
+                ", phoneNumber=" + phoneNumber + '\'' +
+                ", type=" + type +
+                '}';
+    }
+
     public static class Builder{
         private String medicalFacilityID;
         private String name;

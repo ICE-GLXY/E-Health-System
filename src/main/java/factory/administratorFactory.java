@@ -2,7 +2,6 @@ package factory;
 
 import domain.User;
 import domain.administrator;
-import domain.doctor;
 
 public class administratorFactory {
     public static administrator builder(User user, String administratorID, String managedUsers){
