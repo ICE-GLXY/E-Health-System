@@ -2,10 +2,11 @@ package factory;
 
 import domain.User;
 import domain.patient;
+import domain.patientMedicalInformation;
 
 public class patientFactory {
 
-    public static patient builder(User user, String patientID, int age, int weight, int height, int streetNumber, String streetName, String city, String province){
+    public static patient builder(User user, String patientID, int age, int weight, int height, int streetNumber, String streetName, String city, String province, patientMedicalInformation patientMedicalInformation){
 
         if(patientID.isEmpty())
             throw new IllegalArgumentException("no patient ID");
@@ -19,6 +20,7 @@ public class patientFactory {
                 .streetName(streetName)
                 .city(city)
                 .province(province)
+                .patientMedicalInformation(patientMedicalInformation)
                 .build();
     }
 }
