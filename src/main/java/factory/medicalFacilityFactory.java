@@ -4,7 +4,7 @@ import domain.User;
 import domain.medicalFacility;
 
 public class medicalFacilityFactory {
-    public static medicalFacility builder(String medicalFacilityID, String name, int streetNumber, String streetName, String city, String province, String email, int phoneNumber, String type){
+    public static medicalFacility builder(String medicalFacilityID, String name, int streetNumber, String streetName, String city, String province, String email, String phoneNumber, String type){
 
         return new medicalFacility.Builder()
                 .medicalFacilityID(medicalFacilityID)

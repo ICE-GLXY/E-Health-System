@@ -11,6 +11,7 @@ public class patient
     private String streetName;
     private String city;
     private String province;
+    private patientMedicalInformation patientMedicalInformation;
 
         protected patient(){
         }
@@ -25,6 +26,7 @@ public class patient
             this.streetName = b.streetName;
             this.city = b.city;
             this.province = b.province;
+            this.patientMedicalInformation = b.patientMedicalInformation;
         }
 
     public User getUser() {
@@ -107,18 +109,28 @@ public class patient
         return this;
     }
 
+    public patientMedicalInformation getPatientMedicalInformation() {
+        return patientMedicalInformation;
+    }
+
+    public patient setPatientMedicalInformation(patientMedicalInformation patientMedicalInformation) {
+        this.patientMedicalInformation = patientMedicalInformation;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "patient{" +
                 "patientID='" + patientID + '\'' +
-                ", user=" + user +
-                ", age=" + age +
-                ", weight=" + weight +
-                ", height=" + height +
+                ", user=" + user + '\'' +
+                ", age=" + age + '\'' +
+                ", weight=" + weight + '\'' +
+                ", height=" + height + '\'' +
                 ", streetNumber=" + streetNumber +
                 ", streetName='" + streetName + '\'' +
                 ", city='" + city + '\'' +
                 ", province='" + province + '\'' +
+                ", patientMedicalInformation=" + patientMedicalInformation + '\'' +
                 '}';
     }
 
@@ -133,6 +145,7 @@ public class patient
             private String streetName;
             private String city;
             private String province;
+            private patientMedicalInformation patientMedicalInformation;
 
             public Builder user(User user) {
                 this.user = user;
@@ -171,6 +184,10 @@ public class patient
                 this.province = province;
                 return this;
             }
+            public Builder patientMedicalInformation(patientMedicalInformation patientMedicalInformation) {
+                this.patientMedicalInformation = patientMedicalInformation;
+                return this;
+            }
             public Builder copy(patient e){
                 this.user = e.user;
                 this.patientID = e.patientID;
@@ -181,6 +198,7 @@ public class patient
                 this.streetName = e.streetName;
                 this.city = e.city;
                 this.province = e.province;
+                this.patientMedicalInformation = e.patientMedicalInformation;
                 return this;
             }
 
