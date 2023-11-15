@@ -9,7 +9,7 @@ public class medicalFacility {
     private String province;
 
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
     private String type;
 
 
@@ -91,11 +91,11 @@ public class medicalFacility {
         return this;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public medicalFacility setPhoneNumber(int phoneNumber) {
+    public medicalFacility setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -133,7 +133,7 @@ public class medicalFacility {
         private String province;
 
         private String email;
-        private int phoneNumber;
+        private String phoneNumber;
 
         private String type;
 
@@ -172,7 +172,7 @@ public class medicalFacility {
             return this;
         }
 
-        public Builder phoneNumber(int phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }

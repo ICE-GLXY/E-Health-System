@@ -4,7 +4,7 @@ import domain.User;
 
 public class userFactory {
     private static final String validation = "^(.+)@(.+)$";
-    public static User builder(String username, String name, String password, String userType, int cellPhoneNumber, String email){
+    public static User builder(String username, String name, String password, String userType, String cellPhoneNumber, String email){
 
         if(!email.matches(validation))
             throw new IllegalArgumentException("Invalid email");

@@ -12,7 +12,7 @@ public class User {
     @NotNull
         public String password;
     @NotNull
-        public int cellPhoneNumber;
+        public String cellPhoneNumber;
     @NotNull
         public String email;
     @NotNull
@@ -39,7 +39,7 @@ public class User {
         return this;
     }
 
-    public int getCellPhoneNumber() {
+    public String getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
@@ -52,7 +52,7 @@ public class User {
         return this;
     }
 
-    public User setCellPhoneNumber(int cellPhoneNumber) {
+    public User setCellPhoneNumber(String cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
         return this;
     }
@@ -99,7 +99,7 @@ public class User {
             private String name;
             private String username;
             private String password;
-            private int cellPhoneNumber;
+            private String cellPhoneNumber;
             private String email;
             private String userType;
 
@@ -118,7 +118,7 @@ public class User {
                 return this;
             }
 
-        public Builder cellPhoneNumber(int cellPhoneNumber){
+        public Builder cellPhoneNumber(String cellPhoneNumber){
             this.cellPhoneNumber = cellPhoneNumber;
             return this;
         }
