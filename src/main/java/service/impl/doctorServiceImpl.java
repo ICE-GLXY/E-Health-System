@@ -1,5 +1,5 @@
 package service.impl;
-
+import domain.doctor;
 import repository.IDoctorRepository;
 import service.IDoctorService;
 
