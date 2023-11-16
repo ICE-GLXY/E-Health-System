@@ -1,16 +1,18 @@
 package service.impl;
 
 import domain.pharmacist;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.IPharmacistRepository;
 import service.IPharmacistService;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class pharmacistServiceImpl implements IPharmacistService {
 
     private final IPharmacistRepository repository;
-
+    @Autowired
     public pharmacistServiceImpl(IPharmacistRepository repository) {
         this.repository = repository;
     }

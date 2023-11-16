@@ -2,16 +2,18 @@ package service.impl;
 
 import domain.User;
 import domain.administrator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.IAdministratorRepository;
 import service.IAdministratorService;
 
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class administratorServiceImpl implements IAdministratorService {
     private final IAdministratorRepository repository;
-
+    @Autowired
     public administratorServiceImpl(IAdministratorRepository repository) {
         this.repository = repository;
     }
