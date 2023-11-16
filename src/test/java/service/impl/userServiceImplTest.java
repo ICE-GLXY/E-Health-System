@@ -1,12 +1,7 @@
 package service.impl;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import repository.IUserRepository;
-
-import static org.junit.jupiter.api.Assertions.*;
+import Main.repository.IUserRepository;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class userServiceImplTest {

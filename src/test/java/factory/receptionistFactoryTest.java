@@ -1,8 +1,9 @@
 package factory;
 
-import domain.User;
-import domain.medicalFacility;
-import domain.receptionist;
+import Main.factory.receptionistFactory;
+import Main.domain.User;
+import Main.domain.medicalFacility;
+import Main.domain.receptionist;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

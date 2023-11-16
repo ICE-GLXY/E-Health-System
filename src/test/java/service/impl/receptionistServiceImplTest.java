@@ -1,9 +1,9 @@
 package service.impl;
 
-import domain.User;
-import domain.medicalFacility;
-import domain.receptionist;
-import factory.receptionistFactory;
+import Main.domain.User;
+import Main.domain.medicalFacility;
+import Main.domain.receptionist;
+import Main.factory.receptionistFactory;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -11,12 +11,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import repository.IReceptionistRepository;
-import service.IReceptionistService;
-
-import java.util.Optional;
+import Main.repository.IReceptionistRepository;
+import Main.service.IReceptionistService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -69,7 +65,7 @@ class receptionistServiceImplTest {
     @Order(2)
     @Test
     void read() {
-        repository.getReferenceById(Receptionist.getReceptionistID());
+        repository.findReceptionistById(Receptionist.getReceptionistID());
 
         assertAll(
                 () -> assertNotNull(Receptionist.getReceptionistID())

@@ -1,8 +1,9 @@
 package factory;
 
-import domain.User;
-import domain.medicalFacility;
-import domain.nurse;
+import Main.factory.nurseFactory;
+import Main.domain.User;
+import Main.domain.medicalFacility;
+import Main.domain.nurse;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
