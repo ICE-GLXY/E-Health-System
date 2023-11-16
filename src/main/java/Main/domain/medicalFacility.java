@@ -2,6 +2,7 @@ package Main.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 //import javax.persistence.Entity;
@@ -13,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 //@Entity
 public class medicalFacility {
-//    @Id
+    @Id
 //    @NotNull
     private String medicalFacilityID;
 //    @NotNull

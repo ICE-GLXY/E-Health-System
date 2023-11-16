@@ -65,7 +65,7 @@ class receptionistServiceImplTest {
     @Order(2)
     @Test
     void read() {
-        repository.findReceptionistById(Receptionist.getReceptionistID());
+        repository.findById(Receptionist.getReceptionistID());
 
         assertAll(
                 () -> assertNotNull(Receptionist.getReceptionistID())
