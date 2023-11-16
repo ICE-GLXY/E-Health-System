@@ -1,16 +1,18 @@
 package service.impl;
 
 import domain.patientMedicalInformation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.IPatientMedicalInformationRepository;
 import service.IPatientMedicalInformationService;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class patientMedicalInformationServiceImpl implements IPatientMedicalInformationService {
 
     private final IPatientMedicalInformationRepository repository;
-
+    @Autowired
     public patientMedicalInformationServiceImpl(IPatientMedicalInformationRepository repository) {
         this.repository = repository;
     }

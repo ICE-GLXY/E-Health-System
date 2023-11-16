@@ -1,15 +1,36 @@
 package domain;
 
-public class medicalFacility {
-    private String medicalFacilityID;
-    private String name;
-    private int streetNumber;
-    private String streetName;
-    private String city;
-    private String province;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "MedicalFacility")
+@Data
+@AllArgsConstructor
+@Entity
+public class medicalFacility {
+    @Id
+    @NotNull
+    private String medicalFacilityID;
+    @NotNull
+    private String name;
+    @NotNull
+    private int streetNumber;
+    @NotNull
+    private String streetName;
+    @NotNull
+    private String city;
+    @NotNull
+    private String province;
+    @NotNull
     private String email;
+    @NotNull
     private String phoneNumber;
+    @NotNull
     private String type;
 
 

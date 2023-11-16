@@ -1,8 +1,27 @@
 package domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "Administrator")
+@Data
+@AllArgsConstructor
+@Entity
 public class administrator {
+    @NotNull
+    @OneToOne
     private User user;
+    @Id
+    @NotNull
     private String administratorID;
+    @NotNull
     private String managedUsers;
 
     protected administrator(){

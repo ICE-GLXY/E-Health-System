@@ -1,14 +1,16 @@
 package service.impl;
 import domain.doctor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.IDoctorRepository;
 import service.IDoctorService;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class doctorServiceImpl implements IDoctorService {
     private final IDoctorRepository repository;
-
+    @Autowired
     public doctorServiceImpl(IDoctorRepository repository) {
         this.repository = repository;
     }

@@ -1,9 +1,23 @@
 package domain;
 
-public class receptionist {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "Receptionist")
+@Data
+@AllArgsConstructor
+@Entity
+public class receptionist {
+    @Id
+    @NotNull
     private String receptionistID;
+    @OneToOne
     private User user;
+    @OneToOne
     private medicalFacility medicalFacility;
 
     protected receptionist(){

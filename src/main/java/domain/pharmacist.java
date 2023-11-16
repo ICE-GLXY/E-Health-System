@@ -1,9 +1,27 @@
 package domain;
 
-public class pharmacist {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "Pharmacist")
+@Data
+@AllArgsConstructor
+@Entity
+public class pharmacist {
+    @Id
+    @NotNull
     private String pharmacistID;
+    @NotNull
+    @OneToOne
     private medicalFacility medicalFacility;
+    @NotNull
+    @OneToOne
     private User user;
 
     protected pharmacist(){

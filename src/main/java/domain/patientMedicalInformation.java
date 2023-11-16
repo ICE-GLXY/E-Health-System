@@ -1,11 +1,24 @@
 package domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "PatientMedicalInformation")
+@Data
+@AllArgsConstructor
+@Entity
 public class patientMedicalInformation {
+    @Id
+    @NotNull
     private String MedicalRecordID;
     private String MedicalProblems;
     //medicines below
     private String Prescription;
-
     private String medicalTestResults;
     private String Allergies;
     private String ChronicMedication;

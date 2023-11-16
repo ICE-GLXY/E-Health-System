@@ -1,8 +1,27 @@
 package domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+@Document(collection = "Nurse")
+@Data
+@AllArgsConstructor
+@Entity
 public class nurse{
+    @Id
+    @NotNull
     private String nurseID;
+    @OneToOne
+    @NotNull
     private User user;
+    @OneToOne
+    @NotNull
     private medicalFacility medicalFacility;
 
     protected nurse(){

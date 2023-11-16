@@ -1,15 +1,17 @@
 package service.impl;
 
 import domain.nurse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.INurseRepository;
 import service.INurseService;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class nurseServiceImpl implements INurseService {
     private final INurseRepository repository;
-
+    @Autowired
     public nurseServiceImpl(INurseRepository repository) {
         this.repository = repository;
     }

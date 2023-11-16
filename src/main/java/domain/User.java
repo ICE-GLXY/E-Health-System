@@ -1,8 +1,14 @@
 package domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
+@Document(collection = "user")
+@Data
+@AllArgsConstructor
 @Entity
 public class User {
     @Id @NotNull
