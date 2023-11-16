@@ -1,10 +1,9 @@
 package controller;
 
-import domain.User;
-import domain.medicalFacility;
-import domain.receptionist;
-import factory.receptionistFactory;
-import org.apache.coyote.Response;
+import Main.domain.User;
+import Main.domain.medicalFacility;
+import Main.domain.receptionist;
+import Main.factory.receptionistFactory;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

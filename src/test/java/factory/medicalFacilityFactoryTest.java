@@ -1,6 +1,7 @@
 package factory;
 
-import domain.medicalFacility;
+import Main.factory.medicalFacilityFactory;
+import Main.domain.medicalFacility;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

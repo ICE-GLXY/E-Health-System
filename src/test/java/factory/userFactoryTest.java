@@ -1,6 +1,7 @@
 package factory;
 
-import domain.User;
+import Main.factory.userFactory;
+import Main.domain.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
