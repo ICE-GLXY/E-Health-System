@@ -18,7 +18,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class administrator {
 //    @NotNull
 //    @OneToOne
-private ObjectId id;
     private User user;
     @Id
 //    @NotNull
