@@ -4,14 +4,14 @@ import Main.domain.patientMedicalInformation;
 
 public class patientMedicalInformationFactory {
 
-    public static patientMedicalInformation builder(String MedicalRecordID, String MedicalProblems, String Prescription, String medicalTestResults, String Allergies,
+    public static patientMedicalInformation builder(String medicalRecordID, String MedicalProblems, String Prescription, String medicalTestResults, String Allergies,
                                                     String ChronicMedication, String Immunisations, String Hospitalisations, int folderNumber){
 
-        if (MedicalRecordID.isEmpty())
+        if (medicalRecordID.isEmpty())
             throw new IllegalArgumentException("No Medical Record ID");
 
         return new patientMedicalInformation.Builder()
-                .MedicalRecordID(MedicalRecordID)
+                .medicalRecordID(medicalRecordID)
                 .MedicalProblems(MedicalProblems)
                 .Prescription(Prescription)
                 .medicalTestResults(medicalTestResults)
