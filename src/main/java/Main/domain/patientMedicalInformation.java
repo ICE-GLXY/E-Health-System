@@ -15,8 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 //@Entity
 public class patientMedicalInformation {
     @Id
-//    @NotNull
-    private String MedicalRecordID;
+    private String medicalRecordID;
     private String MedicalProblems;
     //medicines below
     private String Prescription;
@@ -30,7 +29,7 @@ public class patientMedicalInformation {
     protected patientMedicalInformation(){}
 
     private patientMedicalInformation(Builder b){
-        this.MedicalRecordID = b.MedicalRecordID;
+        this.medicalRecordID = b.medicalRecordID;
         this.MedicalProblems = b.MedicalProblems;
         this.Prescription = b.Prescription;
         this.medicalTestResults = b.medicalTestResults;
@@ -41,82 +40,83 @@ public class patientMedicalInformation {
         this.folderNumber = b.folderNumber;
     }
 
-    public String getMedicalRecordID() {
-        return MedicalRecordID;
-    }
-
-    public void setMedicalRecordID(String medicalRecordID) {
-        MedicalRecordID = medicalRecordID;
-    }
-
-    public String getMedicalProblems() {
-        return MedicalProblems;
-    }
-
-    public void setMedicalProblems(String medicalProblems) {
-        MedicalProblems = medicalProblems;
-    }
-
-    public String getPrescription() {
-        return Prescription;
-    }
-
-    public void setPrescription(String prescription) {
-        Prescription = prescription;
-    }
-
-    public String getMedicalTestResults() {
-        return medicalTestResults;
-    }
-
-    public void setMedicalTestResults(String medicalTestResults) {
-        this.medicalTestResults = medicalTestResults;
-    }
-
-    public String getAllergies() {
-        return Allergies;
-    }
-
-    public void setAllergies(String allergies) {
-        Allergies = allergies;
-    }
-
-    public String getChronicMedication() {
-        return ChronicMedication;
-    }
-
-    public void setChronicMedication(String chronicMedication) {
-        ChronicMedication = chronicMedication;
-    }
-
-    public String getImmunisations() {
-        return Immunisations;
-    }
-
-    public void setImmunisations(String immunisations) {
-        Immunisations = immunisations;
-    }
-
-    public String getHospitalisations() {
-        return Hospitalisations;
-    }
-
-    public void setHospitalisations(String hospitalisations) {
-        Hospitalisations = hospitalisations;
-    }
-
-    public int getFolderNumber() {
-        return folderNumber;
-    }
-
-    public void setFolderNumber(int folderNumber) {
-        this.folderNumber = folderNumber;
-    }
+//    public String getMedicalRecordID() {
+//        return medicalRecordID;
+//    }
+//
+//    public void setMedicalRecordID(String medicalRecordID) {
+//        this.medicalRecordID = medicalRecordID;
+//        return this;
+//    }
+//
+//    public String getMedicalProblems() {
+//        return MedicalProblems;
+//    }
+//
+//    public void setMedicalProblems(String medicalProblems) {
+//        MedicalProblems = medicalProblems;
+//    }
+//
+//    public String getPrescription() {
+//        return Prescription;
+//    }
+//
+//    public void setPrescription(String prescription) {
+//        Prescription = prescription;
+//    }
+//
+//    public String getMedicalTestResults() {
+//        return medicalTestResults;
+//    }
+//
+//    public void setMedicalTestResults(String medicalTestResults) {
+//        this.medicalTestResults = medicalTestResults;
+//    }
+//
+//    public String getAllergies() {
+//        return Allergies;
+//    }
+//
+//    public void setAllergies(String allergies) {
+//        Allergies = allergies;
+//    }
+//
+//    public String getChronicMedication() {
+//        return ChronicMedication;
+//    }
+//
+//    public void setChronicMedication(String chronicMedication) {
+//        ChronicMedication = chronicMedication;
+//    }
+//
+//    public String getImmunisations() {
+//        return Immunisations;
+//    }
+//
+//    public void setImmunisations(String immunisations) {
+//        Immunisations = immunisations;
+//    }
+//
+//    public String getHospitalisations() {
+//        return Hospitalisations;
+//    }
+//
+//    public void setHospitalisations(String hospitalisations) {
+//        Hospitalisations = hospitalisations;
+//    }
+//
+//    public int getFolderNumber() {
+//        return folderNumber;
+//    }
+//
+//    public void setFolderNumber(int folderNumber) {
+//        this.folderNumber = folderNumber;
+//    }
 
     @Override
     public String toString() {
         return "patientMedicalInformation{" +
-                "MedicalRecordID='" + MedicalRecordID + '\'' +
+                "medicalRecordID='" + medicalRecordID + '\'' +
                 ", MedicalProblems='" + MedicalProblems + '\'' +
                 ", Prescription='" + Prescription + '\'' +
                 ", medicalTestResults='" + medicalTestResults + '\'' +
@@ -128,8 +128,89 @@ public class patientMedicalInformation {
                 '}';
     }
 
+    public String getMedicalRecordID() {
+        return medicalRecordID;
+    }
+
+    public patientMedicalInformation setMedicalRecordID(String medicalRecordID) {
+        this.medicalRecordID = medicalRecordID;
+        return this;
+    }
+
+    public String getMedicalProblems() {
+        return MedicalProblems;
+    }
+
+    public patientMedicalInformation setMedicalProblems(String medicalProblems) {
+        MedicalProblems = medicalProblems;
+        return this;
+    }
+
+    public String getPrescription() {
+        return Prescription;
+    }
+
+    public patientMedicalInformation setPrescription(String prescription) {
+        Prescription = prescription;
+        return this;
+    }
+
+    public String getMedicalTestResults() {
+        return medicalTestResults;
+    }
+
+    public patientMedicalInformation setMedicalTestResults(String medicalTestResults) {
+        this.medicalTestResults = medicalTestResults;
+        return this;
+    }
+
+    public String getAllergies() {
+        return Allergies;
+    }
+
+    public patientMedicalInformation setAllergies(String allergies) {
+        Allergies = allergies;
+        return this;
+    }
+
+    public String getChronicMedication() {
+        return ChronicMedication;
+    }
+
+    public patientMedicalInformation setChronicMedication(String chronicMedication) {
+        ChronicMedication = chronicMedication;
+        return this;
+    }
+
+    public String getImmunisations() {
+        return Immunisations;
+    }
+
+    public patientMedicalInformation setImmunisations(String immunisations) {
+        Immunisations = immunisations;
+        return this;
+    }
+
+    public String getHospitalisations() {
+        return Hospitalisations;
+    }
+
+    public patientMedicalInformation setHospitalisations(String hospitalisations) {
+        Hospitalisations = hospitalisations;
+        return this;
+    }
+
+    public int getFolderNumber() {
+        return folderNumber;
+    }
+
+    public patientMedicalInformation setFolderNumber(int folderNumber) {
+        this.folderNumber = folderNumber;
+        return this;
+    }
+
     public static class Builder{
-        private String MedicalRecordID;
+        private String medicalRecordID;
         private String MedicalProblems;
         private String Prescription;
         private String medicalTestResults;
@@ -139,8 +220,8 @@ public class patientMedicalInformation {
         private String Hospitalisations;
         private int folderNumber;
 
-        public Builder MedicalRecordID(String MedicalRecordID){
-            this.MedicalRecordID = MedicalRecordID;
+        public Builder medicalRecordID(String medicalRecordID){
+            this.medicalRecordID = medicalRecordID;
             return this;
         }
 
@@ -185,7 +266,7 @@ public class patientMedicalInformation {
         }
 
         public Builder copy(patientMedicalInformation e){
-            this.MedicalRecordID = e.MedicalRecordID;
+            this.medicalRecordID = e.medicalRecordID;
             this.MedicalProblems = e.MedicalProblems;
             this.Prescription = e.Prescription;
             this.medicalTestResults = e.medicalTestResults;

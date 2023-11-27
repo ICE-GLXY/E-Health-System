@@ -35,12 +35,12 @@ public class patientMedicalInformationController {
             return ResponseEntity.ok(save);
         }
         //read
-        @GetMapping("read/{MedicalRecordID}")
-        public ResponseEntity <Optional<patientMedicalInformation>> read (@PathVariable String MedicalRecordID){
-            log.info("read request:{}", MedicalRecordID);
+        @GetMapping("read/{medicalRecordID}")
+        public ResponseEntity <Optional<patientMedicalInformation>> read (@PathVariable String medicalRecordID){
+            log.info("read request:{}", medicalRecordID);
 
             try {
-                Optional<patientMedicalInformation> read = PatientMedicalInformationService.read(MedicalRecordID);
+                Optional<patientMedicalInformation> read = PatientMedicalInformationService.read(medicalRecordID);
                 return ResponseEntity.ok(read);
 
             }catch(IllegalArgumentException e){
