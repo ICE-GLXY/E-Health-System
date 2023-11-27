@@ -17,6 +17,7 @@ public class User {
 //    @NotNull
         public String name;
 //    @NotNull
+        public String surname;
         public String password;
 //    @NotNull
         public String cellPhoneNumber;
@@ -31,6 +32,7 @@ public class User {
         private User(Builder b){
             this.username = b.username;
             this.name = b.name;
+            this.surname = b.surname;
             this.password = b.password;
             this.cellPhoneNumber = b.cellPhoneNumber;
             this.email = b.email;
@@ -43,6 +45,15 @@ public class User {
 
     public User setName(String name) {
         this.name = name;
+        return this;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public User setSurname(String surname) {
+        this.surname = surname;
         return this;
     }
 
@@ -95,6 +106,7 @@ public class User {
         return "User{" +
                 "username='" + username + '\'' +
                 ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", password=" + password + '\'' +
                 ", cellPhoneNumber=" + cellPhoneNumber + '\'' +
                 ", email=" + email + '\'' +
@@ -104,6 +116,7 @@ public class User {
 
     public static class Builder{
             private String name;
+            private String surname;
             private String username;
             private String password;
             private String cellPhoneNumber;
@@ -118,6 +131,10 @@ public class User {
 
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+            public Builder surname(String surname){
+                this.surname = surname;
                 return this;
             }
             public Builder password(String password) {
@@ -142,6 +159,7 @@ public class User {
 
             public Builder copy(User e){
                 this.name = e.name;
+                this.surname = e.surname;
                 this.username = e.username;
                 this.password = e.password;
                 this.cellPhoneNumber = e.cellPhoneNumber;
