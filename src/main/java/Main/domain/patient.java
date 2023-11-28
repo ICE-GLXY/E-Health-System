@@ -22,6 +22,7 @@ public class patient
     @Id
 //    @NotNull
     private String patientID;
+    private String IdNumber;
 //    @NotNull
         private int age;
 //    @NotNull
@@ -46,6 +47,7 @@ public class patient
         private patient(Builder b){
             this.user = b.user;
             this.patientID = b.patientID;
+            this.IdNumber = b.IdNumber;
             this.age = b.age;
             this.weight = b.weight;
             this.height = b.height;
@@ -71,6 +73,15 @@ public class patient
 
     public patient setPatientID(String patientID) {
         this.patientID = patientID;
+        return this;
+    }
+
+    public String getIdNumber() {
+        return IdNumber;
+    }
+
+    public patient setIdNumber(String IdNumber) {
+        this.IdNumber = IdNumber;
         return this;
     }
     public int getAge() {
@@ -150,6 +161,7 @@ public class patient
         return "patient{" +
                 "patientID='" + patientID + '\'' +
                 ", user=" + user + '\'' +
+                ", IdNumber=" + IdNumber + '\'' +
                 ", age=" + age + '\'' +
                 ", weight=" + weight + '\'' +
                 ", height=" + height + '\'' +
@@ -165,6 +177,7 @@ public class patient
         public static class Builder{
             private User user;
             private String patientID;
+            private String IdNumber;
             private int age;
             private int weight;
             private int height;
@@ -180,6 +193,11 @@ public class patient
             }
             public Builder patientID(String patientID) {
                 this.patientID = patientID;
+                return this;
+            }
+
+            public Builder IdNumber(String IdNumber) {
+                this.IdNumber = IdNumber;
                 return this;
             }
 
@@ -218,6 +236,7 @@ public class patient
             public Builder copy(patient e){
                 this.user = e.user;
                 this.patientID = e.patientID;
+                this.IdNumber = e.IdNumber;
                 this.age = e.age;
                 this.weight = e.weight;
                 this.height = e.height;
